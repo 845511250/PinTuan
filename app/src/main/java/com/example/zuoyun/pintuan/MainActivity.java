@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.zuoyun.pintuan.withdrawSetting.GrantActivity;
+import com.example.zuoyun.pintuan.withdrawSetting.WithdrawActivity;
 import com.example.zuoyun.pintuan.withdrawSetting.SettingActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SettingActivity.class));
     }
     public void click2(View v){
-        startActivity(new Intent(this, GrantActivity.class));
+        startActivity(new Intent(this, WithdrawActivity.class));
     }
 }

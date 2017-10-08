@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".withdrawSetting.SettingActivity" />
-        <activity android:name=".withdrawSetting.GrantActivity" />
+        <activity android:name=".withdrawSetting.WithdrawActivity" />
         <activity android:name=".withdrawSetting.AccountListActivity" />
         <activity android:name=".withdrawSetting.AccountDetailActivity"></activity>
     </application>
