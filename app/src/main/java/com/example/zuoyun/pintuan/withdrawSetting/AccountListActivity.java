@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.zuoyun.pintuan.R;
+import com.example.zuoyun.pintuan.R2;
 import com.example.zuoyun.pintuan.withdrawSetting.adapter.AccountListAdapter;
 import com.example.zuoyun.pintuan.withdrawSetting.m.Account;
 
@@ -22,12 +23,12 @@ import butterknife.OnClick;
 public class AccountListActivity extends AppCompatActivity {
     Context context;
 
-    @BindView(R.id.tv_topbar_title)
+    @BindView(R2.id.tv_topbar_title)
     TextView tv_topbar_title;
-    @BindView(R.id.tv_topbar_right)
+    @BindView(R2.id.tv_topbar_right)
     TextView tv_topbar_right;
 
-    @BindView(R.id.rv_accountList)
+    @BindView(R2.id.rv_accountList)
     RecyclerView rv_accountList;
 
     @Override
@@ -45,16 +46,13 @@ public class AccountListActivity extends AppCompatActivity {
         init();
     }
 
-    @OnClick({R.id.iv_topbar_back, R.id.tv_topbar_right})
-    public void OnClick(View v) {
-        switch (v.getId()) {
-            case R.id.iv_topbar_back:
-                finish();
-                break;
-            case R.id.tv_topbar_right:
-                startActivity(new Intent(this, AccountDetailActivity.class));
-                break;
-        }
+    @OnClick(R2.id.iv_topbar_back)
+    void iv_topbar_back(){
+        finish();
+    }
+    @OnClick(R2.id.tv_topbar_right)
+    void tv_topbar_right(){
+        startActivity(new Intent(this, AccountDetailActivity.class));
     }
 
     void init(){

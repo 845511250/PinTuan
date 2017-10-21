@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.zuoyun.pintuan.R;
+import com.example.zuoyun.pintuan.R2;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,7 +17,7 @@ import butterknife.OnClick;
 public class WithdrawActivity extends AppCompatActivity {
     Context context;
 
-    @BindView(R.id.tv_topbar_title)
+    @BindView(R2.id.tv_topbar_title)
     TextView tv_topbar_title;
 
     @Override
@@ -29,12 +30,8 @@ public class WithdrawActivity extends AppCompatActivity {
         tv_topbar_title.setText("提现");
     }
 
-    @OnClick({R.id.iv_topbar_back})
-    public void OnClick(View v) {
-        switch (v.getId()) {
-            case R.id.iv_topbar_back:
-                finish();
-                break;
-        }
+    @OnClick(R2.id.iv_topbar_back)
+    void iv_topbar_back(){
+        finish();
     }
 }
